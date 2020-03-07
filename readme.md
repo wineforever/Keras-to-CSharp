@@ -2,7 +2,7 @@
 
 #### Introduction
 
-- It's a base class library of keras based on CSharp used to call. H5 simple deep learning model without any other environment.
+- It's a base class library of keras based on CSharp used to call. H5 simple deep learning model.
 - It could deploy your deep-learning model in C# without any other environment.
 - The call to the small model (eg. BP net/shallow CNN) is much faster than tensorflow.
 
