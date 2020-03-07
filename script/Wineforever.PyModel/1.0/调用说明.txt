@@ -1,0 +1,20 @@
+一、解析模型文件
+1，将模型文件复制到Input文件夹下。
+2，双击运行model_analysis.py脚本：
+please enter model name(eg:model.h5):   #模型名称
+is show net structure?(y/n):  #是否显示网络结构
+is show data shape?(y/n):  #是否显示数据形状
+fast read or customize read?(fr/cr):  #使用快读模式或者自定义模式
+'''
+若解析BP网络或CNN网络，所有选项直接回车即可。
+'''
+3，程序执行完毕会在Output文件夹内保存输出文件。
+
+二、自定义模式：
+please enter first name(eg:model_weights):  #输入网络结构的第一层（非模型第一层）名称
+please enter second name(eg:dense_1):  #输入网络结构的第二层名称
+please enter third name(eg:dense_1):  #输入网络结构的第三层名称
+please enter fourth name(eg:bias:0):  #输入网络结构的第四层名称，此层决定解析Bias还是Kernel
+is 1 dim,2 dims or more?(eg:1):  #输入数据结构的维度
+please enter its length:  #输入当前维度的数据长度
+please enter its name:  #输出文件名
