@@ -53,7 +53,7 @@ However, you can still learn about it by following these steps:
 6. **Load** Weights:
 
    ```C#
-   sys.Load(@"d:\myweights");  //weights folder path
+   sys.Load(@"d:\myweights\");  //weights folder path
    ```
 
 7. Set **Input**:
