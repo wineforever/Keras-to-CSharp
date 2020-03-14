@@ -78,7 +78,8 @@ This class library follows the open source protocol and is not allowed to be use
 
 #### Donate
 
-If you want to sponsor me, you can scan the QR code below. Thank you for your support anyway.
+If you want to sponsor me, you can scan the QR code below,or donate bitcoin to me. Thank you for your support anyway.
 
-![](http://106.15.93.194/donate/donate.PNG)
+Bitcoin Wallet:16RpsEY6C1zLZTPZUX8mXK9ozooqhh5YqS
 
+![](http://106.15.93.194/donate/donate.png)
