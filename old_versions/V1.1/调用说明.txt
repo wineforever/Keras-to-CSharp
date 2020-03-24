@@ -1,13 +1,12 @@
 一、基础说明
-1，将3个类库文件放到程序根目录。
-2，引入Wineforever.Neuralnet.dll。
+1，将5个类库文件放到程序根目录。
+2，引入Neuralnet.dll。
 3，引用命名空间:
             using Wineforever.Neuralnet;
 4，创建神经网络系统:
             var sys = new Wineforever.Neuralnet.System("sys");//参数说明:[name]系统名,可任意指定,无影响
 [input]系统输入,类型为System或List<double>,若为缺省则可通过System.Input()函数设置.
 5，创建网络层:
-//BP网络示例:
             sys.Create(512, "", "relu");//输入层
 //参数说明:[neuron_num]当前层神经元个数
 //[name]网络层名称,可任意指定,无影响
@@ -15,20 +14,16 @@
 //[optimizer]优化器
             sys.Create(256, "", "relu");//隐含层
             sys.Create(10, "", "softmax");//输出层
-
-//CNN示例:
-            sys.Create(3,5);//卷积层,卷积核数目3，卷积核尺寸5
-            sys.Create(6,3);
-            sys.Create("flatten");
-            sys.Create(128); //全连接层
-            sys.Create(10,"","softmax");
-
 6，设置数据:
             sys.Input(train_x);
-7，输出:
+7，训练:
+            sys.Train(train_y, epoch);//参数说明:[target]训练目标
+//[epoch]迭代次数
+//[loss]损失函数
+8，输出:
             var res = sys.GetOutput();
-8，读取权重参数:
-            sys.Load(path);
+9,保存神经元数据:
+            Wineforever.Neuralnet.client.Save();
 
 二、内置函数
 1，激励器(Activation):relu, normal(线性函数), sigmoid, leaky relu, softmax(仅输出层)
@@ -37,6 +32,7 @@
 
 三、其他
 1，创建带有Dropout的网络层:
+            Wineforever.Neuralnet.client.dropout_rate = 0.2;  //设置Dropout概率
             sys.Create(256, "", "sigmoid", "SGD,dropout");
 2，连接两个网络系统:
             decoded.Input(encoded);
@@ -50,5 +46,13 @@
 //同理,删除网络层:encoded.Remove(layer)
 4，获取中间层输入:
             var layer_res = layer.GetOutput();
-5，打印网络信息:
+5，神经元:
+            var Neuron = layer.Neuron[0];
+            Neuron.Connect(neuron);//令某个神经元与指定神经元连接
+            Neuron.Disconnect(neuron);//断开连接
+            Neuron.Save();//保存权重
+            Neuron.SetWeight(value);//设置权重
+6，设置学习率
+            Wineforever.Neuralnet.client.learning_rate = 1e-2;
+7，打印网络信息:
             sys.Print();

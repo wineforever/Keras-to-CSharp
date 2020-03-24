@@ -72,6 +72,42 @@ With this class library,you can call Predict faster than using tf or keras.(BP o
 
 I implement it through object-oriented method,each unit like neuron or kernel is individually encapsulated,and its bias implementation is exactly as same as Keras,so anyone who wants to get started with machine learning can learn from it.
 
+#### What's New?
+
+In Version 2.0, I simplified the neural network structure and greatly improved the forward propagation speed.
+
+Because I found that the reason for the slow speed of the old version is that it excessively encapsulates neurons and convolution kernels (in order to make the back propagation easier), but after I decided to abandon the back propagation, I reconstructed the structure of the dense layer and the convolution layer. Now they have actually become a one-time matrix operation, and the efficiency has been greatly improved.
+
+Update Log:
+
+- V 2.0:
+
+  1) The network structure has been optimized, the forward propagation speed has been greatly improved, and the efficiency has been increased by 1000 times.
+
+  2) It focuses on the forward propagation of neural network and no longer supports back propagation.
+
+- V 1.3:Without reference to Lua script, it no longer supports custom interface, which makes class library lightweight.
+
+- V 1.2:
+
+  1) Added the volume accumulation layer and flatten layer.
+
+  2) Load function is added to support reading model weight parameters.
+
+  3) Add loadkernel, loadbias, print and other methods for layer.
+
+- V 1.1: 
+
+  1) Now the input layer also has neurons, and the number of neurons in the input layer does not have to be the same as the number of data in the input dataset.
+
+  2) When you update the system now, you will not delete the neurons in the first layer and create them again, but just change their connection.
+
+  3) Fixed the error that the weight was no longer initialized after the network layer was added
+
+  4) The MSE loss function is corrected
+
+- V 1.0: The basic framework of neural network model is established.
+
 #### Agreement
 
 This class library follows the open source protocol and is not allowed to be used commercially.

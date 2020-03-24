@@ -25,9 +25,15 @@
 
 6，设置数据:
             sys.Input(train_x);
-7，输出:
+7，训练:
+            sys.Train(train_y, epoch);//参数说明:[target]训练目标
+//[epoch]迭代次数
+//[loss]损失函数
+8，输出:
             var res = sys.GetOutput();
-8，读取权重参数:
+9,保存神经元数据:
+            sys.Save();
+10，读取权重参数:
             sys.Load(path);
 
 二、内置函数
@@ -50,5 +56,11 @@
 //同理,删除网络层:encoded.Remove(layer)
 4，获取中间层输入:
             var layer_res = layer.GetOutput();
-5，打印网络信息:
+5，神经元:
+            var Neuron = layer.Neuron[0];
+            Neuron.Connect(neuron);//令某个神经元与指定神经元连接
+            Neuron.Disconnect(neuron);//断开连接
+            Neuron.Save();//保存权重
+            Neuron.SetWeight(value);//设置权重
+6，打印网络信息:
             sys.Print();
