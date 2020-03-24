@@ -1,0 +1,14 @@
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.csprojAssemblyReference.cache
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.mainfrm.resources
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.Properties.Resources.resources
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.csproj.GenerateResource.cache
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.csproj.CoreCompileInputs.cache
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\bin\Debug\mnist.exe.config
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\bin\Debug\mnist.exe
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\bin\Debug\mnist.pdb
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\bin\Debug\Wineforever.Neuralnet.dll
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\bin\Debug\Wineforever.Mathematics.dll
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\bin\Debug\Wineforever.String.dll
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.csproj.CopyComplete
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.exe
+E:\我的文档\文档\作品\Keras-to-CSharp\example\cnn\mnist\obj\Debug\mnist.pdb
